@@ -1,0 +1,212 @@
+.play-section {
+  padding-top: 80px;
+  padding-bottom: 80px;
+
+  @include media(desktop) {
+    scroll-margin-top: 70px;
+  }
+}
+
+.play-carousel-container {
+  margin-top: 20px;
+  overflow: hidden;
+
+  @include media(desktop) {
+    margin-top: 64px;
+  }
+}
+
+.play-swiper-container {
+  position: relative;
+  overflow: hidden;
+  width: 280px;
+  margin-left: auto;
+  margin-right: auto;
+  visibility: hidden;
+
+  @include media(desktop) {
+    display: none;
+  }
+}
+
+.play-swiper-container.show {
+  visibility: visible;
+}
+
+.play-swiper-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.play-swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 280px;
+  height: 410px;
+  background-color: transparent;
+  overflow: hidden;
+}
+
+.play-img {
+  width: auto;
+  height: auto;
+}
+
+.play-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 24px;
+  gap: 16px;
+
+  @include media(desktop) {
+    display: none;
+  }
+}
+
+.play-arrow-btn {
+  transition: transform 0.3s ease-in-out;
+
+  &:hover {
+    transform: scale(1.2);
+  }
+
+  &[disabled] {
+    opacity: 0.5;
+    cursor: not-allowed;
+
+    &:hover {
+      transform: none;
+    }
+  }
+}
+
+.play-dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+
+.play-dot {
+  width: 19px;
+  height: 18px;
+  transition: transform 0.3s, background-color 0.3s, width 0.3s, height 0.3s;
+  border-radius: 100%;
+  background-color: #f593bc;
+}
+
+.play-dot.active {
+  background-color: #fff;
+  width: 26px;
+  height: 26px;
+}
+
+.play-carousel-desktop {
+  display: none;
+  position: relative;
+
+  @include media(desktop) {
+    display: block;
+    width: 1297px;
+    height: 1509px;
+  }
+}
+
+.play-item-desktop-1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.play-item-desktop-2 {
+  position: absolute;
+  top: 110px;
+  left: 440px;
+}
+
+.play-item-desktop-3 {
+  position: absolute;
+  top: 145px;
+  right: 0;
+}
+
+.play-item-desktop-4 {
+  position: absolute;
+  top: 492px;
+  left: 0;
+}
+
+.play-item-desktop-5 {
+  position: absolute;
+  top: 492px;
+  left: 440px;
+}
+
+.play-item-desktop-6 {
+  position: absolute;
+  top: 568px;
+  right: 0;
+}
+
+.play-item-desktop-7 {
+  position: absolute;
+  bottom: 0;
+  left: 220px;
+}
+
+.play-item-desktop-8 {
+  position: absolute;
+  bottom: 176px;
+  right: 111px;
+}
+
+@keyframes slideInLeftDesktop {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInRightDesktop {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.play-item-desktop-1,
+.play-item-desktop-2,
+.play-item-desktop-3,
+.play-item-desktop-7,
+.play-item-desktop-8 {
+  opacity: 0;
+  transform: translateX(0);
+  transition: opacity 0.5s ease-in-out;
+}
+
+.play-item-desktop-1.animate-left,
+.play-item-desktop-2.animate-left,
+.play-item-desktop-3.animate-left {
+  animation: slideInLeftDesktop 1s forwards;
+}
+
+.play-item-desktop-7.animate-left,
+.play-item-desktop-8.animate-left {
+  animation: slideInLeftDesktop 1s forwards;
+}
+
+.play-item-desktop-4.animate-right,
+.play-item-desktop-5.animate-right,
+.play-item-desktop-6.animate-right {
+  animation: slideInRightDesktop 1s forwards;
+}

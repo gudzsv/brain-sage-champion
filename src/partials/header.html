@@ -1,0 +1,56 @@
+<header class="header">
+  <div class="container">
+    <nav class="nav">
+      <a href="./index.html">
+        <picture class="nav-img">
+          <source
+            srcset="
+              ./img/header/logo-desktop.png    1x,
+              ./img/header/logo-desktop-2x.png 2x
+            "
+            media="(min-width: 1440px)"
+          />
+          <source
+            srcset="./img/header/logo.png 1x, ./img/header/logo-2x.png 2x"
+            media="(max-width: 1439px)"
+          />
+          <img
+            class="nav-img"
+            src="./img/header/logo.png"
+            alt="Logo"
+            width="44"
+            height="44"
+          />
+        </picture>
+      </a>
+      <ul class="nav-list">
+        <li class="nav-list-item">
+          <a class="nav-list-link" href="./index.html">Home</a>
+        </li>
+        <li class="nav-list-item">
+          <a class="nav-list-link" href="./index.html#benefits">Benefits</a>
+        </li>
+        <li class="nav-list-item">
+          <a class="nav-list-link" href="./index.html#about">About the Game</a>
+        </li>
+        <li class="nav-list-item">
+          <a class="nav-list-link" href="./index.html#play">How to Play</a>
+        </li>
+        <li class="nav-list-item">
+          <a class="nav-list-link" href="./index.html#gallery">Gallery</a>
+        </li>
+        <li class="nav-list-item">
+          <a class="nav-list-link" href="./index.html#advantages">Advantages</a>
+        </li>
+        <li class="nav-list-item">
+          <a class="nav-list-link" href="./index.html#faq">FAQ</a>
+        </li>
+      </ul>
+      <button class="nav-btn" type="button" aria-label="Open mobile menu">
+        <svg class="menu-icon" width="34" height="34">
+          <use href="./img/icons/sprite.svg#icon-menu"></use>
+        </svg>
+      </button>
+    </nav>
+  </div>
+</header>

@@ -1,0 +1,133 @@
+.faq-section {
+  padding-top: 80px;
+  padding-bottom: 80px;
+
+  @include media(desktop) {
+    scroll-margin-top: 70px;
+  }
+}
+
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  margin-top: 24px;
+
+  @include media(desktop) {
+    margin-top: 64px;
+  }
+}
+
+.faq-list-item {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #000;
+  border-radius: 32px;
+  width: 280px;
+  // height: 120px;
+  height: 60px;
+  background-color: #eb96b5;
+  transition: height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  overflow: hidden;
+
+  @include media(desktop) {
+    width: 1076px;
+    // height: 104px;
+    height: 52px;
+    justify-content: center;
+  }
+}
+
+.faq-top-text {
+  font-family: 'Merriweather', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  text-align: center;
+  color: #000;
+  padding-right: 18px;
+  padding-left: 18px;
+  // padding-top: 20px;
+  // padding-bottom: 10px;
+  height: 60px;
+  display: flex;
+  // justify-content: center;
+  justify-content: space-between;
+  align-items: center;
+  transition: color 0.3s ease-in-out;
+
+  @include media(desktop) {
+    font-size: 32px;
+    padding: 0;
+    padding-top: 7px;
+    padding-left: 34px;
+    text-align-last: left;
+    padding-bottom: 7px;
+    height: 52px;
+    padding-right: 34px;
+    // text-align: left;
+  }
+}
+
+.faq-bottom-text {
+  font-family: 'Merriweather', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  text-align: center;
+  color: #fff;
+  margin-top: auto;
+  border-top: 1px solid #fff;
+  padding-top: 10px;
+  padding-bottom: 14px;
+  display: none;
+  opacity: 0;
+
+  @include media(desktop) {
+    font-size: 30px;
+    padding: 0;
+    margin-top: 0;
+    padding-top: 5px;
+    text-align: left;
+    padding-left: 34px;
+    padding-bottom: 9px;
+    text-align: left;
+  }
+}
+
+.faq-open {
+  height: 120px;
+
+  @include media(desktop) {
+    height: 104px;
+  }
+}
+
+.is-visible {
+  display: block;
+  opacity: 1;
+}
+
+.faq-toggle-symbol {
+  // display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease;
+  margin-left: 8px;
+}
+
+.faq-icon {
+  fill: #000;
+}
+
+.faq-list-item.faq-open .faq-toggle-symbol {
+  transform: rotate(180deg);
+}
+
+.text-center {
+  @include media(to-desktop) {
+    display: inline-block;
+    padding-left: 42px;
+  }
+}

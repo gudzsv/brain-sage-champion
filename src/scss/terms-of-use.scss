@@ -1,0 +1,145 @@
+.terms-body {
+  background: linear-gradient(
+    180deg,
+    #9d073d 0%,
+    #d4346d 16%,
+    #bd2058 33%,
+    #c22a61 47%,
+    #bd2058 56%,
+    #ad134a 78%,
+    #bd2058 92%,
+    #9d073d 100%
+  );
+
+  @include media(desktop) {
+    background: linear-gradient(
+      180deg,
+      #9d073d 0%,
+      #b7245e 26%,
+      #a62953 47%,
+      #971946 65%,
+      #9d073d 100%
+    );
+  }
+}
+
+.page-title-wrapper {
+  text-align: center;
+}
+
+.page-title {
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: $_black_text_color;
+  font-family: 'Permanent Marker', sans-serif;
+  font-size: 32px;
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  padding-top: 94px;
+
+  @include media(desktop) {
+    padding-top: 100px;
+    font-size: 70px;
+  }
+}
+
+.page-title::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 6px;
+  width: 100%;
+  background-color: $_white_text_color;
+  border: 2px solid $_black_text_color;
+}
+
+.terms-section {
+  padding-top: 40px;
+
+  &:last-child {
+    padding-bottom: 40px;
+  }
+
+  @include media(desktop) {
+    padding-top: 100px;
+  }
+
+  p {
+    margin-bottom: 32px;
+
+    &:first-of-type {
+      margin-top: 0;
+    }
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+
+    @include media(desktop) {
+      font-size: 20px;
+    }
+  }
+}
+
+.terms-section-title {
+  color: $_white_text_color;
+  text-align: center;
+  -webkit-text-stroke-width: 1.2px;
+  -webkit-text-stroke-color: $_black_text_color;
+  font-size: 28px;
+  margin-bottom: 32px;
+
+  @include media(desktop) {
+    -webkit-text-stroke-width: 2px;
+    font-size: 50px;
+    margin-bottom: 64px;
+  }
+}
+
+.greeting {
+  display: inline-block;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 700;
+
+  @include media(desktop) {
+    font-size: 26px;
+  }
+}
+
+.bg-img-paws-right {
+  background-image: image-set(
+    url('../img/terms/paws-to-right-1x.png') 1x,
+    url('../img/terms/paws-to-right-2x.png') 2x
+  );
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: 50% 78%;
+
+  @include media(desktop) {
+    background-image: image-set(
+      url('../img/terms/paws-to-left-desk-1x.png') 1x,
+      url('../img/terms/paws-to-left-desk-2x.png') 2x
+    );
+    background-position: 88% 66%;
+  }
+}
+
+.bg-img-paws-left {
+  background-image: image-set(
+    url('../img/terms/paws-to-left-1x.png') 1x,
+    url('../img/terms/paws-to-left-2x.png') 2x
+  );
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: 50% 42%;
+
+  @include media(desktop) {
+    background-image: image-set(
+      url('../img/terms/paws-to-right-desk-1x.png') 1x,
+      url('../img/terms/paws-to-right-desk-2x.png') 2x
+    );
+    background-position: 13% 91%;
+  }
+}

@@ -1,0 +1,77 @@
+<section class="gallery-section" id="gallery">
+  <div class="container gallery-container">
+    <h1 class="section-title">Gallery</h1>
+    <div class="gallery-swiper-container">
+      <ul class="swiper-wrapper gallery-swiper-wrapper">
+        <li class="swiper-slide gallery-slide">
+          <picture>
+            <source
+              srcset="
+                ./img/gallery/gallery-1.png    1x,
+                ./img/gallery/gallery-1-2x.png 2x
+              "
+            />
+            <img
+              class="gallery-img"
+              src="./img/gallery/gallery-1.png"
+              alt="Gallery image"
+              width="280"
+              height="157"
+            />
+          </picture>
+        </li>
+        <li class="swiper-slide gallery-slide">
+          <picture>
+            <source
+              srcset="
+                ./img/gallery/gallery-2.png    1x,
+                ./img/gallery/gallery-2-2x.png 2x
+              "
+            />
+            <img
+              class="gallery-img"
+              src="./img/gallery/gallery-2.png"
+              alt="Gallery image"
+              width="280"
+              height="157"
+            />
+          </picture>
+        </li>
+        <li class="swiper-slide gallery-slide">
+          <picture>
+            <source
+              srcset="
+                ./img/gallery/gallery-3.png    1x,
+                ./img/gallery/gallery-3-2x.png 2x
+              "
+            />
+            <img
+              class="gallery-img"
+              src="./img/gallery/gallery-3.png"
+              alt="Gallery image"
+              width="280"
+              height="157"
+            />
+          </picture>
+        </li>
+      </ul>
+    </div>
+    <div class="controls">
+      <button class="arrow-btn" id="leftArrow" aria-label="Previous slide">
+        <svg class="arrow-icon" width="58" height="30">
+          <use href="./img/icons/sprite.svg#icon-left-arrow"></use>
+        </svg>
+      </button>
+      <div class="dots">
+        <div class="dot active"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+      </div>
+      <button class="arrow-btn" id="rightArrow" aria-label="Next slide">
+        <svg class="arrow-icon" width="58" height="30">
+          <use href="./img/icons/sprite.svg#icon-right-arrow"></use>
+        </svg>
+      </button>
+    </div>
+  </div>
+</section>

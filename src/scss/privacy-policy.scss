@@ -1,0 +1,235 @@
+.privacy-body {
+  background: linear-gradient(
+    180deg,
+    #9d073d 0%,
+    #d4346d 16%,
+    #bd2058 33%,
+    #c22a61 48%,
+    #bd2058 56%,
+    #ad134a 79%,
+    #bd2058 91%,
+    #9d073d 100%
+  );
+
+  @include media(desktop) {
+    background: linear-gradient(
+      180deg,
+      #9d073d 0%,
+      #ab194e 25%,
+      #ab194e 60%,
+      #9d073d 100%
+    );
+  }
+}
+
+.privacy-section {
+  padding-top: 80px;
+
+  @include media(desktop) {
+    padding-top: 100px;
+  }
+}
+
+.privacy-title {
+  position: relative;
+  width: 225px;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: 'Permanent Marker', sans-serif;
+  font-weight: 400;
+  font-size: 32px;
+  text-decoration: none;
+  text-decoration-skip-ink: none;
+  text-align: center;
+  color: #fff;
+  margin-bottom: 32px;
+  -webkit-text-stroke-width: 1.2px;
+  -webkit-text-stroke-color: $_black_text_color;
+
+  @include media(desktop) {
+    width: 497px;
+    -webkit-text-stroke-width: 2px;
+    font-size: 70px;
+    margin-bottom: 64px;
+  }
+}
+
+.privacy-title::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 6px;
+  width: 100%;
+  background-color: $_white_text_color;
+  border: 2px solid $_black_text_color;
+}
+
+.privacy-text {
+  font-family: 'Merriweather', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: #fff;
+
+  @include media(desktop) {
+    font-size: 20px;
+  }
+}
+
+.marketing-section {
+  padding-top: 40px;
+
+  @include media(desktop) {
+    padding-top: 100px;
+  }
+}
+
+.marketing-title {
+  font-family: 'Merriweather', sans-serif;
+  font-weight: 700;
+  font-size: 28px;
+  text-align: center;
+  color: #fff;
+  margin-bottom: 32px;
+  -webkit-text-stroke-width: 1.2px;
+  -webkit-text-stroke-color: $_black_text_color;
+
+  @include media(desktop) {
+    -webkit-text-stroke-width: 2px;
+    font-size: 50px;
+    margin-bottom: 64px;
+  }
+}
+
+.marketing-text {
+  font-family: 'Merriweather', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: #fff;
+
+  @include media(desktop) {
+    font-size: 20px;
+  }
+}
+
+.data-section {
+  padding-top: 40px;
+  background-image: url(../img/privacy/paws-mob.png);
+  background-repeat: no-repeat;
+  background-position: bottom 432px center;
+  background-size: 280px 206px;
+
+  @media (min-resolution: 192dpi) {
+    background-image: url(../img/privacy/paws-mob-2x.png);
+  }
+
+  @include media(desktop) {
+    padding-top: 100px;
+    background-image: url(../img/privacy/paws.png);
+    background-position: bottom 0 center;
+    background-size: 856px 632px;
+
+    @media (min-resolution: 192dpi) {
+      background-image: url(../img/privacy/paws-2x.png);
+    }
+  }
+}
+
+.data-title {
+  font-family: 'Merriweather', sans-serif;
+  font-weight: 400;
+  font-size: 28px;
+  text-align: center;
+  color: #fff;
+  margin-bottom: 32px;
+  -webkit-text-stroke-width: 1.2px;
+  -webkit-text-stroke-color: $_black_text_color;
+
+  @include media(desktop) {
+    -webkit-text-stroke-width: 2px;
+    font-size: 50px;
+    margin-bottom: 64px;
+  }
+}
+
+.data-text {
+  font-family: 'Merriweather', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: #fff;
+  margin-bottom: 32px;
+
+  @include media(desktop) {
+    font-size: 20px;
+    margin-bottom: 64px;
+  }
+}
+
+.data-list {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  list-style-type: disc;
+  padding-left: 24px;
+
+  @include media(desktop) {
+    gap: 38px;
+    padding-left: 36px;
+  }
+}
+
+.data-list-item {
+}
+
+.data-item-text {
+  font-family: 'Merriweather', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  color: #fff;
+
+  @include media(desktop) {
+    font-size: 26px;
+  }
+}
+
+.data-span {
+  font-weight: 700;
+}
+
+.changes-section {
+  padding-top: 40px;
+  padding-bottom: 40px;
+
+  @include media(desktop) {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+}
+
+.changes-title {
+  font-family: 'Merriweather', sans-serif;
+  font-weight: 400;
+  font-size: 28px;
+  text-align: center;
+  color: #fff;
+  margin-bottom: 32px;
+  -webkit-text-stroke-width: 1.2px;
+  -webkit-text-stroke-color: $_black_text_color;
+
+  @include media(desktop) {
+    -webkit-text-stroke-width: 2px;
+    font-size: 50px;
+    margin-bottom: 64px;
+  }
+}
+
+.changes-text {
+  font-family: 'Merriweather', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: #fff;
+
+  @include media(desktop) {
+    font-size: 20px;
+  }
+}

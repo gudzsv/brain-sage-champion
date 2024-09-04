@@ -1,0 +1,157 @@
+.gallery-section {
+  padding-top: 80px;
+  padding-bottom: 80px;
+
+  @include media(desktop) {
+    scroll-margin-top: 70px;
+  }
+}
+
+.gallery-container {
+  background-image: url(../img/gallery/paw-mob.png);
+  background-repeat: no-repeat;
+  background-position: top 32px left 16px;
+  background-size: 29px 27px;
+
+  @media (min-resolution: 192dpi) {
+    background-image: url(../img/gallery/paw-mob-2x.png);
+  }
+
+  @include media(desktop) {
+    background-image: url(../img/gallery/paw.png);
+    background-position: top 62px left 102px;
+    background-size: 136px 117px;
+
+    @media (min-resolution: 192dpi) {
+      background-image: url(../img/gallery/paw-2x.png);
+    }
+  }
+}
+
+.gallery-swiper-container {
+  position: relative;
+  overflow: hidden;
+  margin-top: 20px;
+  width: 280px;
+  border-radius: 32px;
+  margin-left: auto;
+  margin-right: auto;
+  visibility: hidden;
+
+  @include media(desktop) {
+    margin-top: 75px;
+    width: 1076px;
+  }
+}
+
+.gallery-swiper-container.show {
+  visibility: visible;
+}
+
+.gallery-slide {
+  display: flex;
+  background-color: #fff;
+  justify-content: center;
+  align-items: center;
+  border-radius: 32px;
+  width: 280px;
+  height: 157px;
+  overflow: hidden;
+
+  @include media(desktop) {
+    border: 3px solid #890e3a;
+    width: 1076px;
+    height: 601px;
+    padding: 8px 17px;
+  }
+}
+
+.gallery-img {
+  border-radius: 32px;
+  width: 280px;
+  height: 157px;
+
+  @include media(desktop) {
+    width: 1037px;
+    height: 579px;
+  }
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 24px;
+  gap: 16px;
+
+  @include media(desktop) {
+    margin-top: 64px;
+    gap: 48px;
+  }
+}
+
+.arrow-btn {
+  transition: transform 0.3s ease-in-out;
+  background: none;
+  border: none;
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(1.2);
+  }
+
+  &[disabled] {
+    opacity: 0.5;
+    cursor: not-allowed;
+
+    &:hover {
+      transform: none;
+    }
+  }
+}
+
+.arrow-icon {
+  width: 58px;
+  height: 30px;
+
+  @include media(desktop) {
+    width: 86px;
+    height: 42px;
+  }
+}
+
+.dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+
+  @include media(desktop) {
+    gap: 24px;
+  }
+}
+
+.dot {
+  width: 19px;
+  height: 18px;
+  transition: transform 0.5s, background-color 0.5s, width 0.5s, height 0.5s;
+  border-radius: 100%;
+  background-color: #f593bc;
+  cursor: pointer;
+
+  @include media(desktop) {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.dot.active {
+  background-color: #fff;
+  width: 26px;
+  height: 26px;
+
+  @include media(desktop) {
+    width: 30px;
+    height: 30px;
+  }
+}

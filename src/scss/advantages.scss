@@ -1,0 +1,91 @@
+.advantages-section {
+  padding-top: 80px;
+  padding-bottom: 80px;
+
+  @include media(desktop) {
+    scroll-margin-top: 70px;
+  }
+}
+
+.advantages-container {
+  @include media(desktop) {
+    background-image: url(../img/advantages/paws.png);
+    background-repeat: no-repeat;
+    background-position: top 450px right 150px;
+    background-size: 153px 149px;
+
+    @media (min-resolution: 192dpi) {
+      background-image: url(../img/advantages/paws-2x.png);
+    }
+  }
+}
+
+.advantages-list {
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  justify-content: center;
+  align-items: center;
+
+  @include media(desktop) {
+    margin-top: 64px;
+    gap: 32px;
+    align-items: start;
+    padding-left: 110px;
+  }
+}
+
+.advantages-list-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+
+  @include media(desktop) {
+    gap: 24px;
+  }
+}
+
+.advantages-img {
+  flex-shrink: 0;
+  transform: translateX(-20px);
+  transition: transform 0.5s ease-out;
+}
+
+.advantages-text {
+  font-family: 'Merriweather', sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  color: #000;
+  width: 198px;
+  transform: translateX(20px);
+  transition: transform 0.5s ease-out;
+
+  @include media(desktop) {
+    font-size: 32px;
+    width: 100%;
+  }
+}
+
+.advantages-list-item.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.advantages-img.in-view {
+  transform: translateX(0);
+}
+
+.advantages-text.in-view {
+  transform: translateX(0);
+}
+
+.advantages-list-item:hover .advantages-img {
+  @include media(desktop) {
+    transform: translateX(20px) scale(1.1);
+  }
+}

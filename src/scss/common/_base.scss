@@ -1,0 +1,77 @@
+:root {
+  font-family: 'Merriweather', sans-serif;
+  color: $_white_text_color;
+  background: $_bg_mobile_color;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+
+  @include media(desktop) {
+    background: $_bg_desktop_color;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
+
+.container {
+  width: 100%;
+  max-width: 320px;
+  padding-right: 20px;
+  padding-left: 20px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @include media(desktop) {
+    max-width: 1440px;
+    padding-right: 72px;
+    padding-left: 72px;
+  }
+}
+
+.container-terms-policy {
+  width: 100%;
+  max-width: 320px;
+  padding-right: 20px;
+  padding-left: 20px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @include media(desktop) {
+    max-width: 1440px;
+    padding-right: 182px;
+    padding-left: 182px;
+  }
+}
+
+.section-title {
+  font-family: 'Permanent Marker', sans-serif;
+  font-weight: 400;
+  font-size: 32px;
+  text-align: center;
+  color: $_white_text_color;
+  -webkit-text-stroke-width: 1.2px;
+  -webkit-text-stroke-color: $_black_text_color;
+
+  @include media(desktop) {
+    font-size: 70px;
+    -webkit-text-stroke-width: 2px;
+  }
+}

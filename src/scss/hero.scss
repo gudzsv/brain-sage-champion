@@ -1,0 +1,160 @@
+.hero-content-wrapper {
+  padding-top: 24px;
+  padding-bottom: 24px;
+  @include media(desktop) {
+    padding-top: 108px;
+    padding-bottom: 74px;
+    display: flex;
+    gap: 252px;
+  }
+
+  .hero-img {
+    display: none;
+
+    @include media(desktop) {
+      display: block;
+    }
+  }
+}
+
+.content-item {
+  @include media(desktop) {
+    padding-left: 110px;
+  }
+
+  .section-title {
+    margin-bottom: 24px;
+
+    @include media(desktop) {
+      font-size: 70px;
+      margin-bottom: 40px;
+    }
+  }
+}
+
+.hero-text {
+  margin-bottom: 24px;
+  line-height: normal;
+
+  @include media(desktop) {
+    font-size: 25px;
+    width: 416px;
+    margin-bottom: 40px;
+  }
+}
+
+.underline-text {
+  @include media(desktop) {
+    font-weight: 700;
+    text-decoration-line: underline;
+  }
+}
+
+.line-puzzle-img {
+  margin: 0 auto;
+  margin-bottom: 24px;
+
+  @include media(desktop) {
+    display: none;
+  }
+}
+
+.gplay-btn {
+  display: flex;
+  height: 83px;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  border-radius: 15px;
+  border: 2px solid $_black_text_color;
+  background-color: $_pink_color;
+  width: 280px;
+  height: 83px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.gplay-btn:hover {
+  background-color: $_white_text_color;
+  border-color: $_white_text_color;
+}
+
+.gplay-text {
+  color: $_black_text_color;
+  font-family: Roboto;
+  font-style: normal;
+  line-height: normal;
+  font-weight: 500;
+}
+
+.gplay-text-top {
+  font-size: 20px;
+}
+
+.gplay-text-botom {
+  font-size: 35px;
+  letter-spacing: -0.03em;
+
+  @include media(desktop) {
+    font-size: 37px;
+  }
+}
+
+.bg-puzzles {
+  overflow: hidden;
+  background-image: url('../img/hero/puzzle_piece.webp'),
+    url('../img/hero/puzzle_piece1.webp');
+  background-position: -50% 56%, 150% 7.5%;
+  background-repeat: no-repeat, no-repeat;
+  background-size: 117px 117px, 96px 96px;
+  will-change: background-position;
+  animation: moveBackgroundMobile 2s ease-out forwards;
+
+  @include media(desktop) {
+    background-image: url('../img/hero/puzzle_piece11.webp'),
+      url('../img/hero/puzzle_piece12.webp'),
+      url('../img/hero/puzzle_piece13.webp'),
+      url('../img/hero/puzzle_piece14.webp');
+    background-position: -50% 20%, 150% 50%, 55% 150%, 92% -50%;
+    background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+    background-size: 414px 414px, 219px 219px, 306px 306px, 416px 340px;
+    animation: moveBackgroundDesktop 2s ease-out forwards;
+  }
+}
+
+@keyframes moveBackgroundMobile {
+  0% {
+    background-position: -50% 56%, 150% 7.5%;
+  }
+  100% {
+    background-position: 5% 56%, 94% 7.5%;
+  }
+}
+
+@keyframes moveBackgroundDesktop {
+  0% {
+    background-position: -50% 20%, 150% 50%, 55% 150%, 92% -50%;
+  }
+  100% {
+    // z-index: -1;
+    background-position: 7.8% 20%, 43.2% 50%, 55% 95%, 92% 1%;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.drop {
+  animation: pulse 3s infinite;
+  transform-origin: center;
+  will-change: transform;
+}

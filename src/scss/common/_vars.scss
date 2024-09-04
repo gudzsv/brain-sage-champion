@@ -1,0 +1,39 @@
+$_main_color: #242424;
+$_main_bg_color: rgba(255, 255, 255, 0.87);
+$_header_color: #747bff;
+$_header_accent_color: red;
+
+$_white_text_color: #fff;
+$_black_text_color: #000;
+$_pink_color: #fac6d9;
+$_bg_mobile_color: linear-gradient(
+  180deg,
+  #9d073d 0%,
+  #d4346d 16.06%,
+  #dd7a9d 24.99%,
+  #bd2058 33.38%,
+  #c4406f 42.85%,
+  #c22a61 48.03%,
+  #bd2058 55.73%,
+  #e05d8c 68.05%,
+  #ad134a 79.4%,
+  #db5484 85.43%,
+  #bd2058 92.16%,
+  #9d073d 100%
+);
+
+$_bg_desktop_color: linear-gradient(
+  180deg,
+  #9d073d 0%,
+  #d4346d 13.27%,
+  #dd7a9d 20.14%,
+  #bd2058 25.97%,
+  #c4406f 31.81%,
+  #c22a61 34.11%,
+  #bd2058 38.42%,
+  #e05d8c 47.34%,
+  #ad134a 59.36%,
+  #db5484 75.83%,
+  #bd2058 88.36%,
+  #9d073d 100%
+);
